@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Eshop</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- font cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- css  -->
+    <link rel="stylesheet" href="./main.css">
+</head>
+
+<body> 
+
+    <!-- header --> 
+    <div class="top">
+        <div class="top-left">
+            <ul>
+                <li style="border-left:solid 1px rgba(167, 165, 165, 0.211);" ><i class="fa-solid fa-phone" ></i> + 0348 696 887</li>
+                <li ><i class="fa-solid fa-envelope"></i></i> abc@shop.com</li>
+            </ul>
+        </div>
+        <div class="top-right">
+            <ul>
+                <li style="border-left:solid 1px rgba(167, 165, 165, 0.211);" ><i class="fa-solid fa-location-dot"></i><a href="#"> Store Location</a></li>
+                <li><i class="fa-regular fa-clock"></i> <a href="#">Daily Deal</a></li>
+                <li><i class="fa-solid fa-user"></i> <a href="#">My account</a></li>
+                <li><i class="fa-solid fa-power-off"></i> <a href="#">Login</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- search -->
+    <div class="header">
+        <div class="logo-page">
+            <img class="logo" src="/mg/LS (1).png" alt="logo">
+        </div>
+        <div class="search-bar">
+            <div class="search-bar-top">
+                <div class="nice-select">
+                    <select name="select-bar" id="slv">
+                        <option value="">All Category</option>
+                        <option value="">Giay Nam</option>
+                        <option value="">Quan Nam</option>
+                        <option value="">Sale Off</option>
+                    </select>
+                </div>
+                <input class="search" type="search" name="search" placeholder="Tim kiem san pham ...">
+                <button class="bt"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </div>
+        <div class="profile">
+            <div class="right-bar">
+                <i class="fa-regular fa-heart" id="heart"></i>
+                <i class="fa-regular fa-circle-user" id="user"></i>
+                <i class="fa-solid fa-cart-shopping" id="cart"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- CATEGORIES -->
+    <div class="navbar" id="nav">
+                
+        <div class="dropdown">
+            <button class="dropbtn"><i class="fa-solid fa-bars"></i>&emsp;Catagories &emsp;</i></button>
+            <div class="dropdown-content">
+              <a href="#">Men</a>
+              <a href="#">Women</a>
+              <a href="#">Sales</a>
+            </div>
+        </div>
+        <div class="nav-right">
+            <a href="#">Home</a>
+        </div>
+        <div class="nav-right">
+            <a href="#">Services</a>
+        </div>
+        <div class="nav-right">
+            <a href="#">Contast Us</a>
+        </div>
+        
+    </div>
+
+    <div class="live">
+    
+<!-- Cart Start -->
+<br>
+    <div class="container-fluid">
+        <div class="row px-xl-5">
+            <div class="col-lg-8 table-responsive mb-5">
+                <table class="table table-light table-borderless table-hover text-center mb-0">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Products</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Total</th>
+                            <th>Remove</th>
+                        </tr>
+                    </thead>
+                    <tbody class="align-middle">
+                        <tr>
+                            <td class="align-middle"><img src="img/1.jpg" alt="" style="width: 50px;"> Product Name</td>
+                            <td class="align-middle">$Price</td>
+                            <td class="align-middle">
+                                <div class="input-group quantity mx-auto" style="width: 100px;">
+                                    <div class="input-group-btn">
+                                        <button class="btn btn-sm btn-primary btn-minus" >
+                                    <i class="fa fa-minus"></i>
+                                    </button>
+                                </div>
+                                <input type="text" class="form-control form-control-sm bg-secondary border-0 text-center" value="1">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-sm btn-primary btn-plus">
+                                        <i class="fa fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="align-middle">$Price</td>
+                        <td class="align-middle"><button class="btn btn-sm btn-danger"><i class="fa fa-times"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td class="align-middle"><img src="img/2.jpg" alt="" style="width: 50px;"> Product Name</td>
+                        <td class="align-middle">$Price</td>
+                        <td class="align-middle">
+                            <div class="input-group quantity mx-auto" style="width: 100px;">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-sm btn-primary btn-minus" >
+                                    <i class="fa fa-minus"></i>
+                                    </button>
+                                </div>
+                                <input type="text" class="form-control form-control-sm bg-secondary border-0 text-center" value="1">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-sm btn-primary btn-plus">
+                                        <i class="fa fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="align-middle">$Price</td>
+                        <td class="align-middle"><button class="btn btn-sm btn-danger"><i class="fa fa-times"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td class="align-middle"><img src="img/3.jpg" alt="" style="width: 50px;"> Product Name</td>
+                        <td class="align-middle">$Price</td>
+                        <td class="align-middle">
+                            <div class="input-group quantity mx-auto" style="width: 100px;">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-sm btn-primary btn-minus" >
+                                    <i class="fa fa-minus"></i>
+                                    </button>
+                                </div>
+                                <input type="text" class="form-control form-control-sm bg-secondary border-0 text-center" value="1">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-sm btn-primary btn-plus">
+                                        <i class="fa fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="align-middle">$Price</td>
+                        <td class="align-middle"><button class="btn btn-sm btn-danger"><i class="fa fa-times"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td class="align-middle"><img src="img/4.jpg" alt="" style="width: 50px;"> Product Name</td>
+                        <td class="align-middle">$Price</td>
+                        <td class="align-middle">
+                            <div class="input-group quantity mx-auto" style="width: 100px;">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-sm btn-primary btn-minus" >
+                                    <i class="fa fa-minus"></i>
+                                    </button>
+                                </div>
+                                <input type="text" class="form-control form-control-sm bg-secondary border-0 text-center" value="1">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-sm btn-primary btn-plus">
+                                        <i class="fa fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="align-middle">$Price</td>
+                        <td class="align-middle"><button class="btn btn-sm btn-danger"><i class="fa fa-times"></i></button></td>
+                    </tr>
+                    <tr>
+                        <td class="align-middle"><img src="img/5.jpg" alt="" style="width: 50px;"> Product Name</td>
+                        <td class="align-middle">$Price</td>
+                        <td class="align-middle">
+                            <div class="input-group quantity mx-auto" style="width: 100px;">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-sm btn-primary btn-minus" >
+                                    <i class="fa fa-minus"></i>
+                                    </button>
+                                </div>
+                                <input type="text" class="form-control form-control-sm bg-secondary border-0 text-center" value="1">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-sm btn-primary btn-plus">
+                                        <i class="fa fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="align-middle">$Price</td>
+                        <td class="align-middle"><button class="btn btn-sm btn-danger"><i class="fa fa-times"></i></button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-lg-4">
+            <form class="mb-30" action="">
+                <div class="input-group">
+                    <input type="text" class="form-control border-0 p-4" placeholder="Coupon Code">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary">Apply Coupon</button>
+                    </div>
+                </div>
+            </form>
+            <h5 class="section-title position-relative text-uppercase mb-3"><span class="bg-secondary pr-3">Cart Summary</span></h5>
+            <div class="bg-light p-30 mb-5">
+                <div class="border-bottom pb-2">
+                    <div class="d-flex justify-content-between mb-3">
+                        <h6>Subtotal</h6>
+                        <h6>$ Subtotal-Price</h6>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <h6 class="font-weight-medium">Shipping</h6>
+                        <h6 class="font-weight-medium">$ Shipping-Price</h6>
+                    </div>
+                </div>
+                <div class="pt-2">
+                    <div class="d-flex justify-content-between mt-2">
+                        <h5>Total</h5>
+                        <h5>$ Total-Price</h5>
+                    </div>
+                    <button class="btn btn-block btn-primary font-weight-bold my-3 py-3">Proceed To Checkout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Cart end-->
+
+<!-- footer -->
+<footer>
+    <div class="container footer_content">
+        <div class="eshop">
+            <div class="title">
+                <a href="#">
+                    <img src="./img/logo2.png" alt="logo2">
+                </a>
+            </div>
+            <p class="text">Praesent dapibus, neque id cursus ucibus, tortor neque egestas augue, magna eros eu
+                erat. Aliquam
+                erat
+                volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</p>
+            <p>Got Question? Call us 24/7
+            </p>
+            <a href="#" class="contact">+0123456789</a>
+        </div>
+        <div class="infomation">
+            <h4 class="title">Infomation</h4>
+            <ul class="link">
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Fag</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Help</a></li>
+
+            </ul>
+        </div>
+        <div class="customer">
+            <h4 class="title">Customer Service</h4>
+            <ul class="link">
+                <li><a href="#">Payment Methods</a></li>
+                <li><a href="#">Money-back</a></li>
+                <li><a href="#">Returns</a></li>
+                <li><a href="#">Shipping</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+        <div class="getInTuch">
+            <h4 class="title">Get In Tuch</h4>
+            <p>NO. 342 - London Oxford Street.</p>
+            <p>012 United Kingdom.
+            </p>
+            <p>info@eshop.com
+            </p>
+            <p>+032 3456 7890
+            </p>
+            <div class="icon">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" class="double_icon">
+                    <i class="fa-solid fa-circle"></i>
+                    <i class="fa-regular fa-circle"></i>
+                </a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+
+    </div>
+    <div class="container mt-5">
+        <hr style="background-color: #535353; width: 100%;">
+        <div class="footer_end">
+            <div>
+                <p>Copyright © 2020 <a href="#" target="_blank">Wpthemesgrid</a>- All Rights Reserved.</p>
+            </div>
+            <div>
+                <img src="./img/payments.png" alt="payments">
+            </div>
+        </div>
+    </div>
+</footer>
+<!--footer end-->
+
+<script src="./main.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+</html>

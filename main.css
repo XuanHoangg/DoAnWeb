@@ -57,7 +57,7 @@
 
 .header{
     display: flex;
-    width: 100%;
+    /* width: 100%; */
     height: 140px;
     padding: 0 0;
     align-items: center;
@@ -170,6 +170,7 @@
 }
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
+  left: 5px;      
   display: none;
   position: absolute;
   background-color: #f1f1f1;
@@ -305,14 +306,14 @@
 
 /*tai*/
 /* purchase */
-#purchase {
+/* #purchase {
     background-color: #F7941D;
     padding: 50px 0;
 }
 
 .purchase_content {
     color: white;
-}
+} */
 
 /* purchase */
 

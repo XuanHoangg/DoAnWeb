@@ -221,24 +221,59 @@ function displayProducts() {
     }, "")
     document.querySelector(".product_item").innerHTML = product;
 }
-displayProducts()
+// displayProducts()
 
 let slideIndex = 0;
 showSlides();
 
 function showSlides() {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 2000); // Change image every 2 seconds
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1 }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
+
+const search = () => {
+    const input = document.querySelector(".search").value;
+    const newList = products.data.filter((item) => item.category === input)
+    console.log(newList);
+    if (!input) {
+        displayProducts()
+    }
+    else {
+        const product = newList.reduce((result, product) => {
+            return result + `
+                 <div class="col-sm-4 d-flex my-3 item">
+                    <div class="overlay">
+                         <img class ="sale_img" src="${product.image}" alt="${product.id} width="200px" height="200px"">
+                         
+                    </div>
+                     <div class="sale_text">
+                        <div>
+                             <p class = "sale_decs">${product.productName}</p>
+                             <p class = "sale_price">${product.price}$</p>
+                             <span>
+                                <button class ="btn btn-success">
+                                    <i class="fa-solid fa-bag-shopping"></i> Add Cart
+                                </button>
+                            </span>
+                        </div>
+                     </div>
+                 </div>
+            `
+        }, "")
+        document.querySelector(".product_item").innerHTML = product;
+        product();
+    }
+}
+search()

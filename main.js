@@ -279,3 +279,4 @@ document.getElementById("btn-purchase").addEventListener("click", () => {
 function end() {
     document.getElementById("pay-Modal").style.display = "none";
 }
+displayProducts()

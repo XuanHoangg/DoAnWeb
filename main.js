@@ -176,23 +176,23 @@ const search = () => {
     else {
         const product = newList.reduce((result, product) => {
             return result + `
-                 <div class="col-sm-4 d-flex my-3 item">
-                    <div class="overlay">
-                         <img class ="sale_img" src="${product.image}" alt="${product.id} width="200px" height="200px"">
-                         
-                    </div>
-                     <div class="sale_text">
-                        <div>
-                             <p class = "sale_decs">${product.productName}</p>
-                             <p class = "sale_price">${product.price}$</p>
-                             <span>
-                                <button class ="btn btn-success">
-                                    <i class="fa-solid fa-bag-shopping"></i> Add Cart
-                                </button>
-                            </span>
-                        </div>
-                     </div>
-                 </div>
+            <div class="col-sm-4 d-flex my-3 item">
+            <div class="overlay">
+                 <img class ="sale_img" src="${product.image}" alt="${product.id} width="200px" height="200px"">
+                 
+            </div>
+             <div class="sale_text">
+                <div>
+                     <p class = "sale_decs">${product.productName}</p>
+                     <p class = "sale_price">${product.price}$</p>
+                     <span>
+                        <button class ="btn btn-success" onclick="addToCart('${product.productName}')">
+                            <i class="fa-solid fa-bag-shopping"></i> Add Cart
+                        </button>
+                    </span>
+                </div>
+             </div>
+         </div>
             `
         }, "")
         document.querySelector(".product_item").innerHTML = product;

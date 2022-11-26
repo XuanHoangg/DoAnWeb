@@ -64,7 +64,51 @@
             <div class="right-bar">
                 <i class="fa-regular fa-heart" id="heart"></i>
                 <i class="fa-regular fa-circle-user" id="user"></i>
-                <i class="fa-solid fa-cart-shopping" id="cart"></i>
+                <!-- <i class="fa-solid fa-cart-shopping" id="cart"></i> -->
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                    <i class="fa-solid fa-cart-shopping" id="cart"></i>
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Giỏ hàng</h5>
+
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <table class="table">
+                                    <tr>
+                                        <th>Hình ảnh</th>
+                                        <th>Tên giày</th>
+                                        <th>Loại giày</th>
+                                        <th>Giá</th>
+                                        <th>Số lượng</th>
+                                    </tr>
+                                    <tbody id="cart-item"></tbody>
+                                </table>
+                                <div style="text-align: right">
+                                    <div style="color:red" class="my-3">Tổng số tiền:
+                                        <span id="tongTien"></span>$
+                                    </div>
+                                    <button class="btn btn-warning" id="btn-purchase">
+                                        Thanh toán
+
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -331,6 +375,23 @@
             </div>
         </div>
     </footer>
+    <div id="pay-Modal">
+        <div class="overplay"></div>
+        <div class="modal-header">
+
+            <table id="showCart"></table>
+            <hr />
+
+        </div>
+        <div class="modal-body">
+            <h5>Tổng giá tiền đơn hàng của bạn: <span id="totalcart"></span>$</h5>
+            <h3>Đơn hàng của bạn đã được thanh toán</h3>
+            <div class="iconPay">
+                <i class="fa-regular fa-circle-check"></i>
+            </div>
+            <div data-dimiss="pay-Modal"><button onclick="end()">Kết thúc</button></div>
+        </div>
+    </div>
     <script src="./main.js"></script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

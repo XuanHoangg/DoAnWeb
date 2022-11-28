@@ -253,6 +253,7 @@ displayProducts()
     });
 
 
+<<<<<<< Updated upstream
     // Related carousel
     $('.related-carousel').owlCarousel({
         loop: true,
@@ -276,3 +277,56 @@ displayProducts()
         }
     });
 })(jQuery);
+=======
+function displayCart() {
+    const output = cart.reduce((result, product) => {
+        return result + `
+        <tr>
+             <td>
+                  <img src="${product.image}" width="60px" height="60px">
+             </td>
+             <td class= "phoneName">${product.productName}</td>
+             <td>${product.category}</td>
+             <td>${product.price * product.quantity}$</td>
+
+             <td>
+                <button class ="btn btn-danger" onclick="decrease('${product.productName}')">-</button>
+                ${product.quantity}
+                <button class ="btn btn-success" onclick="increase('${product.productName}')">+</button>
+             </td>
+        </tr>
+        `
+    }, "")
+    const tongTien = cart.reduce((result, item) => {
+        return result + (item.price * item.quantity);
+    }, 0)
+    document.getElementById("tongTien").innerHTML = tongTien;
+    document.querySelector("#cart-item").innerHTML = output;
+}
+document.getElementById("btn-purchase").addEventListener("click", () => {
+    if (cart.length === 0) {
+        false;
+    } else {
+        document.getElementById("pay-Modal").style.display = "block";
+        const tongTien = cart.reduce((result, item) => {
+            return result + (item.price * item.quantity);
+        }, 0)
+        document.getElementById("totalcart").innerHTML = tongTien;
+        cart = [];
+        displayCart();
+    }
+});
+
+function end() {
+    document.getElementById("pay-Modal").style.display = "none";
+}
+displayProducts()
+
+$(document).ready(function() {
+ 
+  $("#owl-demo").owlCarousel({
+    navigation : true
+  });
+ 
+});
+>>>>>>> Stashed changes

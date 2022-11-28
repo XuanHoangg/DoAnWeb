@@ -651,6 +651,7 @@ footer {
     padding-right: 15px;
     padding-left: 15px;
   }
+<<<<<<< Updated upstream
 
 /* detail */
 
@@ -814,3 +815,72 @@ footer {
 .nav-tabs .dropdown-menu {
     margin-top: -1px;
 }
+=======
+/* detail */
+  .product-item {
+    transition: .5s;
+  }
+
+  .product-item:hover {
+    box-shadow: 0 0 30px #DDDDDD;
+  }
+  
+  .product-item:hover .product-action {
+    background: rgba(255, 255, 255, 0.7);
+  }
+  
+  .product-item:hover .product-action a.btn:first-child {
+    opacity: 1;
+    margin-top: 0;
+    transition: .3s 0s;
+  }
+  
+  .product-item:hover .product-action a.btn:nth-child(2) {
+    opacity: 1;
+    margin-top: 0;
+    transition: .3s .05s;
+  }
+  
+  .product-item:hover .product-action a.btn:nth-child(3) {
+    opacity: 1;
+    margin-top: 0;
+    transition: .3s .1s;
+  }
+  
+  .product-item:hover .product-action a.btn:nth-child(4) {
+    opacity: 1;
+    margin-top: 0;
+    transition: .3s .15s;
+  }
+  
+  .product-item .product-img img {
+    transition: .5s;
+  }
+  
+  .product-item:hover .product-img img {
+    transform: scale(1.2);
+  }
+  
+  .product-item .btn:hover {
+    color: #FFD333 !important;
+  }
+
+  .position-relative {
+    position: relative !important;
+  }
+
+  .overflow-hidden {
+    overflow: hidden !important;
+  }
+
+  #owl-demo .item{
+    background: #42bdc2;
+    padding: 30px 0px;
+    margin: 10px;
+    color: #FFF;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    text-align: center;
+  }
+>>>>>>> Stashed changes

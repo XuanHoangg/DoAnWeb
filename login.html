@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Register</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    
+</head>
+<body>
+    <div class="container">
+        <input type="checkbox" id="flip">
+        <div class="cover">
+            <div class="front">
+                <img src="img/backImg.jpg" alt="">
+
+            </div>
+        </div>
+        <form action="#" >
+            <div class="form-content">
+                <div class="login-form">
+                    <div class="title">Đăng nhập</div>
+                    <div class="input-boxes">
+                        <div class="email-error" id="error1" value="123">(*) Tài khoản không tồn tại</div>
+                        <div class="email-error" id="error2">(*) Sai mật khẩu</div>
+                        <div class="input-box">
+                            <i class="fas fa-user"></i>
+                            <input type="text" placeholder="Nhập vào Username của bạn" value="" id="l-user">
+                        </div>
+                        <div class="input-box">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" placeholder="Nhập password" value="" id="l-pass">
+                        </div>
+                        <div class="text"><a href="#">Forgot password?</a></div>
+                        <div class ="complete1" id="comp1">(*) Đăng nhập thành công</div>
+                        <div class="button input-box">  
+                            <input type="button"value="Submit" onclick="login()">
+                        </div>
+                        <div class="text login-text">Bạn không có tài khoản? <label for="flip">Đăng ký ngay</label></div>
+                    </div>
+                </div>
+                <div class="sigup-form">
+                    <div class="title">Đăng ký</div>
+                    <div class="input-boxes">
+                        <div class="input-box">
+                            <i class="fas fa-user"></i>
+                            <input type="text" placeholder="Nhập vào tên của bạn" value="" id="username">
+                        </div>
+                        <div class = "signup-username" id="su-name">(*) Không được để trống UserName</div>
+                        <div class="input-box">
+                            <i class="fas fa-envelope"></i>
+                            <input type="text" placeholder="Nhập vào Email của bạn" value="" id="email">
+                        </div>
+                        <div class = "signup-email" id="er-email">(*) Email không hợp lệ</div>
+                        <div class = "signup-email" id="su-email">(*) Không được để trống Email</div>
+                        <div class="input-box">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" placeholder="Nhập password" value="" id="pass">
+                        </div>
+                        <div class = "signup-password" id="su-pass" >(*) Không được để trống password</div>
+                        <div class ="complete2" id="comp2">(*) Đăng ký thành công</div>
+                        <div class="button input-box">
+                            <input type="button"value="Submit" onclick="signup()">
+                        </div>
+                        <div class="text signup-text">Bạn đã có tài khoản? <label for="flip" onclick="chuyentab()">Đăng nhập ngay</label></div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+<script src="longin.js">
+ 
+</script>
+</html>

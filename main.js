@@ -1,3 +1,5 @@
+
+
 let products = {
     data: [
         {
@@ -201,7 +203,23 @@ const search = () => {
 }
 search()
 var cart = [];
+//xử lý login
+const json = JSON.parse(localStorage.getItem("account")) || null;
+
+var x = [];
+console.log(x);
+if (json) {
+    x.push(json)
+    document.getElementById("account").innerHTML = x[0].username;
+    document.getElementById("logout").innerHTML = "Logout"
+}
+
+//
 const addToCart = (productName) => {
+    if (!json) {
+        alert("Vui lòng đang nhập trước khi mua hàng")
+        return
+    }
     //lấy sản phẩm ra từ object 
     const item = products.data.filter((item) => item.productName === productName);
 

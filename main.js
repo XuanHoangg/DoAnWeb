@@ -253,7 +253,7 @@ displayProducts()
     });
 
 
-<<<<<<< Updated upstream
+
     // Related carousel
     $('.related-carousel').owlCarousel({
         loop: true,
@@ -277,7 +277,7 @@ displayProducts()
         }
     });
 })(jQuery);
-=======
+
 function displayCart() {
     const output = cart.reduce((result, product) => {
         return result + `
@@ -324,9 +324,9 @@ displayProducts()
 
 $(document).ready(function() {
  
-  $("#owl-demo").owlCarousel({
-    navigation : true
+    $("#owl-demo").owlCarousel({
+      navigation : true
+    });
+   
   });
- 
-});
->>>>>>> Stashed changes
+

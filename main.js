@@ -213,6 +213,15 @@ if (json) {
     document.getElementById("account").innerHTML = x[0].username;
     document.getElementById("logout").innerHTML = "Logout"
 }
+//nghia
+/* detail */
+$(document).ready(function() {
+ 
+    $("#owl-demo").owlCarousel({
+      navigation : true
+    });
+   
+  });
 
 //
 const addToCart = (productName) => {
@@ -254,38 +263,3 @@ const increase = (productName) => {
     cart[index].quantity += 1;
     displayCart()
 }
-
-function displayCart() {
-    const output = cart.reduce((result, product) => {
-        return result + `
-        <tr>
-             <td>
-                  <img src="${product.image}" width="60px" height="60px">
-             </td>
-             <td class= "phoneName">${product.productName}</td>
-             <td>${product.category}</td>
-             <td>${product.price * product.quantity}$</td>
-
-    // Related carousel
-    $('.related-carousel').owlCarousel({
-        loop: true,
-        margin: 29,
-        nav: false,
-        autoplay: true,
-        smartSpeed: 1000,
-        responsive: {
-            0:{
-                items:1
-            },
-            576:{
-                items:2
-            },
-            768:{
-                items:3
-            },
-            992:{
-                items:4
-            }
-        }
-    });
-})(jQuery);
